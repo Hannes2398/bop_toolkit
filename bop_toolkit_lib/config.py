@@ -12,10 +12,10 @@ import os
 if "BOP_PATH" in os.environ:
     datasets_path = os.environ["BOP_PATH"]
 else:
-    datasets_path = r"/path/to/bop/datasets"
+    datasets_path = r""
 
 # Folder with pose results to be evaluated.
-results_path = r"/path/to/folder/with/results"
+results_path = "C:/Users/adam-5y6ijdz3jnxfre2/Documents/Forschung/WestAI/src/evaluation"
 
 # Folder for the calculated pose errors and performance scores.
 eval_path = r"/path/to/eval/folder"

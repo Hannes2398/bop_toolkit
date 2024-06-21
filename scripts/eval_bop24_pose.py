@@ -4,6 +4,8 @@
 """Evaluation script for the BOP Challenge 2023/2024."""
 
 import os
+import sys
+sys.path.insert(0, 'C:/Users/adam-5y6ijdz3jnxfre2/Documents/Forschung/WestAI/src/evaluation/bop_toolkit')
 import time
 import argparse
 import multiprocessing
@@ -48,7 +50,7 @@ p = {
     # description of the format. Example results can be found at:
     # https://bop.felk.cvut.cz/media/data/bop_sample_results/bop_challenge_2019_sample_results.zip
     "result_filenames": [
-        "/relative/path/to/csv/with/results",
+        "dataset/hodan-iros15/hodan-iros15_icbin-test.csv",
     ],
     # Folder with results to be evaluated.
     "results_path": config.results_path,
@@ -131,7 +133,7 @@ for result_filename in p["result_filenames"]:
     for error in p["errors"]:
         # Calculate error of the pose estimates.
         calc_errors_cmd = [
-            "python",
+            ".venv/Scripts/python.exe",
             os.path.join(
                 os.path.dirname(os.path.realpath(__file__)), "eval_calc_errors.py"
             ),
@@ -164,7 +166,7 @@ for result_filename in p["result_filenames"]:
         for error_sign, error_dir_path in error_dir_paths.items():
             for correct_th in error["correct_th"]:
                 calc_scores_cmd = [
-                    "python",
+                    ".venv/Scripts/python.exe",
                     os.path.join(
                         os.path.dirname(os.path.realpath(__file__)),
                         "eval_calc_scores.py",

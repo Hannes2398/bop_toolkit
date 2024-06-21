@@ -9,6 +9,8 @@ import argparse
 import copy
 import numpy as np
 import multiprocessing
+import sys
+sys.path.insert(0, 'C:/Users/adam-5y6ijdz3jnxfre2/Documents/Forschung/WestAI/src/evaluation/bop_toolkit')
 
 from bop_toolkit_lib import config
 from bop_toolkit_lib import dataset_params
