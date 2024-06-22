@@ -4,8 +4,9 @@
 """Evaluation script for the BOP Challenge 2023/2024."""
 
 import os
+import pathlib
 import sys
-sys.path.insert(0, 'C:/Users/adam-5y6ijdz3jnxfre2/Documents/Forschung/WestAI/src/evaluation/bop_toolkit')
+sys.path.insert(0, pathlib.Path(__file__).resolve().parents[1])
 import time
 import argparse
 import multiprocessing
@@ -50,7 +51,7 @@ p = {
     # description of the format. Example results can be found at:
     # https://bop.felk.cvut.cz/media/data/bop_sample_results/bop_challenge_2019_sample_results.zip
     "result_filenames": [
-        "dataset/hodan-iros15/hodan-iros15_icbin-test.csv",
+        "dataset_bop_structure/dataset_bop_structure-test.csv",
     ],
     # Folder with results to be evaluated.
     "results_path": config.results_path,
