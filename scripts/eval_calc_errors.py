@@ -11,7 +11,7 @@ import copy
 import numpy as np
 import multiprocessing
 import sys
-sys.path.insert(0, pathlib.Path(__file__).resolve().parents[1])
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 from bop_toolkit_lib import config
 from bop_toolkit_lib import dataset_params
